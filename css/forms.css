@@ -1,52 +1,31 @@
+/* Form-specific styles */
 
-form>div {
-    margin:1em; /*Top Right Bottom Left*/
-}
-
-
-/* keeps form from bunching up to left */
-@media all and (min-width:501px){
-    div.wrapper form{
-        margin-left:22.8px;
-    }
-}
-
-/* start reCAPTCHA styles */
-		
-/* writes to small text above reCAPTCHA upon failure */
-.dateFeedback{
-    font-style:italic;
-    font-size:70%;
-    font-weight:bold;
-    color:#f00;
-}
-
-input:required {
-      border: 1px solid red;
-}
-
-input:optional, textarea:optional {
-     background-color:#f1f1f1;
-     border:1px solid #ccc;
-}
-
-input[type="submit"], input[type="button"] {
-  background-color: #fff;
-  border-radius: 4px;
-  border: solid 1px #ccc;
-  padding: 0.3em 0.5em;
-}
-
-fieldset {
+/* Example styles for forms */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
   border: 1px solid #ccc;
-  max-width: 350px;
+  box-sizing: border-box;
 }
 
-legend {
-  margin-left: 0.5em;
-  padding: 0.2em 0.5em;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
 }
 
-/* end reCAPTCHA styles */
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}

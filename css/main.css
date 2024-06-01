@@ -1,139 +1,104 @@
-/* Global rules */
-
-@import url('https://fonts.googleapis.com/css?family=Quicksand|Spectral');
-
-html {
-    background-color: lightgray;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 0.95em;
-    line-height: 1.5em;
-    background-image: url("../images/background.jpg");
-    background-repeat: repeat;
-    background-size: 2000px 1200px;
+/* General styles */
+.text-align-center {
+    text-align: center;
+    background-color: aqua;
+    margin-top: 20px;
+    padding: 10px;
 }
 
-body{
-    margin:0; /* removes gap at top of page */
-}
-
-::selection {
-    color: #000; 
-    background: #ff0;
-}
-
-h1 {
-    font-weight: normal;
+.margin-auto > div {
     margin: auto;
-    background: #fff;
-    line-height: 2.5em;
-}
-/*
- The border radius on h1.page-header and main.wrapper provide the 
- curved corners that appear on the body area of the page
-*/
-h1.page-header{
-    font-family: 'Spectral',serif;
-    -webkit-border-top-left-radius: 5px;
-    -webkit-border-top-right-radius: 5px;
-    -moz-border-radius-topleft: 5px;
-    -moz-border-radius-topright: 5px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
- }
- 
-
- main.wrapper {
-    background-color: white;
-    overflow: auto;
-    -moz-border-radius-bottomleft: 5px;
-    -moz-border-radius-bottomright: 5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
- }
- 
-
-p {
-    margin: 1em; /* Top Right Bottom Left (TRBL) */
+    width: 50%;
+    background-color: beige;
+    text-align: center;
+    padding: 10px;
 }
 
-h2,h3 {
-    font-weight: normal;
-    margin-left: 1em;
-    line-height: 1em;
+.my-column {
+    width: 50%; /* Ensure columns are side by side with equal width */
+    padding: 10px;
+    box-sizing: border-box;
+    height: auto; /* Adjust height automatically */
 }
 
-a {
-    color:darkcyan;
+.my-row {
+    display: flex;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+@media all and (max-width: 600px) {
+    .my-column {
+        width: 100%;
+        height: auto; /* Allows height to adjust in mobile view */
+    }
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-container .fa {
+    padding: 20px;
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
     text-decoration: none;
+    margin: 5px 15px; /* Add margin to create space between icons */
+    border-radius: 50%;
 }
 
-a:hover {
-    color: whitesmoke;
-    background-color: darkcyan;
-    text-decoration: none;
+.social-container .fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.fa-snapchat-ghost {
+    background: #fffc00;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.flexible {
+    display: flex;
+    justify-content: center;
+}
+
+.img-container {
+    width: 100%;
+    height: auto;
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the container without stretching */
+    border: 2px solid #000;
 }
 
 footer {
-    clear: both;
     text-align: center;
-    padding: 1em;
-}
-
-/* Responsive rules */
-
-/* DESKTOP */
-@media all and (min-width:1200px) {
-    main.wrapper {
-        width: 80%;
-        margin: auto;
-    }
-    
-    h1 {
-        width: 79%;
-        padding-left: 1%;
-    }
-    
-    picture.profile img {
-        width: 50%;
-        float: left;
-        margin-right: 2em;
-    }
-    
-}
-
-/* TABLET */
-@media all and (min-width:501px) and (max-width:1199px) {
-    main.wrapper {
-        width: 90%;
-        margin: auto;
-    }
-    
-    h1 {
-        width: 89%;
-        padding-left: 1%;
-    }
-    
-    picture.profile img {
-        width: 50%;
-        float: right;
-        margin-left: 1em;
-    }
-
-}
-
-/* PHONE */
-@media all and (max-width:500px) {
-    main.wrapper {
-        width: 100%;
-    }
-    
-    h1 {
-        width: 99%;
-        padding-left: 1%;
-    }
-    
-    picture.profile img {
-        width: 100%;
-    }
-    
+    margin-top: 20px;
 }
